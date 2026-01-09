@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando Noticia...</title>
+    <link rel="stylesheet" href="diseños.css">
+</head>
+<body>
+    <div class="contenedor-detalle">
+        <a href="index.html" style="display:block; margin-bottom: 20px;">← Volver al inicio</a>
+        
+        <h1 id="titulo-noticia">Cargando título...</h1>
+        <p id="fecha-noticia" style="color: gray;"></p>
+        <hr>
+        <div id="contenido-noticia">
+            </div>
+    </div>
+
+    <script src="noticias.js"></script>
+    <script>
+        // Lógica para detectar qué noticia mostrar
+        function cargarDetalle() {
+            // 1. Obtener el ID de la URL (ej: noticia.html?id=1)
+            const urlParams = new URLSearchParams(window.location.search);
+            const noticiaId = urlParams.get('id');
+
+            // 2. Buscar esa noticia en nuestra lista
+            const noticiaEncontrada = noticias.find(n => n.id == noticiaId);
+
+            if (noticiaEncontrada) {
+                // 3. Poner la información en el HTML
+                document.getElementById('titulo-noticia').innerText = noticiaEncontrada.titulo;
+                document.getElementById('fecha-noticia').innerText = noticiaEncontrada.fecha;
+                document.getElementById('contenido-noticia').innerHTML = `
+                    <p>${noticiaEncontrada.contenido}</p>
+                    <p>Aquí puedes agregar más detalles que solo existan en esta vista...</p>
+                `;
+                document.title = noticiaEncontrada.titulo;
+            } else {
+                document.getElementById('titulo-noticia').innerText = "Noticia no encontrada";
+            }
+        }
+
+        // Ejecutar al cargar la página
+        window.onload = cargarDetalle;
+    </script>
+    <script src="noticias.js"></script>
+
+<script>
+    function cargarDetalle() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const noticiaId = urlParams.get('id');
+        const noticia = noticias.find(n => n.id == noticiaId);
+
+        if (noticia) {
+            document.getElementById('titulo-noticia').innerText = noticia.titulo;
+            document.getElementById('fecha-noticia').innerText = "Publicado el " + noticia.fecha;
+            document.getElementById('contenido-noticia').innerHTML = `
+                <p>${noticia.contenido}</p>
+                <p>Información adicional del Instituto: Recuerde que para más detalles puede 
+                abocarse a las oficinas administrativas.</p>
+            `;
+            document.title = noticia.titulo;
+        }
+    }
+    window.onload = cargarDetalle;
+    function cargarDetalle() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const noticiaId = urlParams.get('id');
+    const noticia = noticias.find(n => n.id == noticiaId);
+
+    if (noticia) {
+        document.getElementById('titulo-noticia').innerText = noticia.titulo;
+        document.getElementById('fecha-noticia').innerText = "Publicado el " + noticia.fecha;
+        
+        // Aquí es donde sucede la magia:
+        document.getElementById('contenido-noticia').innerHTML = `
+            <img src="${noticia.imagen}" alt="${noticia.titulo}" style="width:100%; border-radius:15px; margin-bottom:20px; max-height:400px; object-fit:cover;">
+            
+            <div style="border-left: 4px solid ${noticia.color}; padding-left: 20px;">
+                <p style="font-size: 1.2rem; font-weight: bold;">${noticia.contenido}</p>
+                <p>${noticia.descripcionLarga}</p> 
+            </div>
+        `;
+        document.title = noticia.titulo;
+    }
+}
+</script>
+</body>
+</html>
