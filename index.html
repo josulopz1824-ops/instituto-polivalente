@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <style>
-    html {
-        scroll-behavior: smooth;
-    }
-</style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo-mini.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Polivalente Superación San José - San José de Comayagua</title>
-    <style>
-        /* Estilos de Monarca: Moderno y Limpio */
-        body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #003366; color: white; padding: 20px; text-align: center; }
-        nav { background: #002244; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .hero { background: white; padding: 40px 20px; text-align: center; }
-        .btn { background: #ccaa00; color: #002244; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .section { padding: 20px; max-width: 800px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; }
-        footer { text-align: center; padding: 20px; font-size: 0.8em; color: #666; }
-    </style>
+    <link rel="stylesheet" href="diseños.css">
 </head>
 <body>
 
@@ -42,11 +27,14 @@
         <a href="#" style="text-decoration: none; color: #003366; font-weight: 700; font-size: 0.75em; text-transform: uppercase; padding: 5px 8px;">Inicio</a>
         <a href="#requisitos" style="text-decoration: none; color: #003366; font-weight: 700; font-size: 0.75em; text-transform: uppercase; padding: 5px 8px;">Requisitos</a>
         <a href="#carreras" style="text-decoration: none; color: #003366; font-weight: 700; font-size: 0.75em; text-transform: uppercase; padding: 5px 8px;">Carreras</a>
-        <a href="#noticias" style="text-decoration: none; color: #003366; font-weight: 700; font-size: 0.75em; text-transform: uppercase; padding: 5px 8px;">Noticias</a>
     </div>
 </nav>
-
+<main>
+    <div id="contenedor-noticias"></div>
+</main>
 </nav>
+
+<div id="contenedor-noticias"></div>
 
 <div class="hero">
     <h2>Bienvenidos a la Nueva Era Digital</h2>
@@ -129,37 +117,11 @@
 
     </div>
 
+</div>
+
+<div id="contenedor-noticias">
     </div>
-
-    <div id="noticias" style="padding: 60px 20px; background-color: white;">
-    <h2 style="text-align: center; color: #003366; font-size: 2.2em; margin-bottom: 10px;">📰 Últimas Noticias</h2>
-    <p style="text-align: center; color: #666; margin-bottom: 40px;">Mantente informado sobre los eventos de nuestro instituto.</p>
-
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 1200px; margin: 0 auto;">
-        
-        <div style="flex: 1 1 350px; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee;">
-            <div style="background: #003366; height: 150px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">📝</div>
-            <div style="padding: 20px;">
-                <span style="background: #e67e22; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8em; font-weight: bold;">AVISO</span>
-                <h4 style="margin: 15px 0 10px; color: #003366;">Proceso de Matrícula 2026</h4>
-                <p style="color: #555; font-size: 0.95em; line-height: 1.5;">Se les informa a los padres de familia que las inscripciones para el nuevo año escolar ya están abiertas. ¡Asegura tu cupo!</p>
-                <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-                <small style="color: #999;">Publicado: 8 de Enero, 2026</small>
-            </div>
-        </div>
-
-        <div style="flex: 1 1 350px; background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #eee;">
-            <div style="background: #27ae60; height: 150px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3em;">🏆</div>
-            <div style="padding: 20px;">
-                <span style="background: #27ae60; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.8em; font-weight: bold;">LOGROS</span>
-                <h4 style="margin: 15px 0 10px; color: #003366;">Primer Lugar en Feria Científica</h4>
-                <p style="color: #555; font-size: 0.95em; line-height: 1.5;">Nuestros estudiantes de Informática destacaron con el mejor proyecto tecnológico a nivel departamental.</p>
-                <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
-                <small style="color: #999;">Publicado: 5 de Enero, 2026</small>
-            </div>
-        </div>
-
-    </div>
+    
 </div>
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.3340502280786!2d-88.03623517727101!3d14.7311043029953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f65c900401dff57%3A0x6e05e233c93f9534!2sINSTITUTO%20SUPERACION%20SAN%20JOSE!5e0!3m2!1ses-419!2shn!4v1767907375748!5m2!1ses-419!2shn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -198,8 +160,12 @@
     ↑
 </a>
 
-</body>
+<script src="noticias.js"></script>
+
 </html>
+</body>
+
+
 
 
 
