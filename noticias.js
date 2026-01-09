@@ -12,17 +12,6 @@ const noticias = [
         url: "noticia.html?id=1"
     },
     {
-        id: 3,
-        titulo: "perro muerto",
-        fecha: "08 de Enero, 2026",
-        contenido: "Ya puedes presentarte...", // Resumen para la tarjeta
-        descripcionLarga: "El proceso de matrícula iniciará a las 7:00 AM. Los padres deben traer el certificado de conducta y la partida de nacimiento original. Contaremos con personal de apoyo en cada módulo...", 
-        imagen: "https://tu-imagen-aqui.jpg", // Puedes usar una URL de internet o el nombre de una foto en tu carpeta
-        etiqueta: "Importante",
-        color: "#ff22edff",
-        url: "noticia.html?id=1"
-    },
-    {
         id: 2,
         titulo: "Nueva Página Web",
         fecha: "09 de Enero, 2026",
